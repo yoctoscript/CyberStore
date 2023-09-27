@@ -1,2 +1,2 @@
 # CyberStore
-An E-Commerce Web Application built with ASP.NET Core following the MVC Pattern.
+An e-commerce web application built with ASP.NET Core following the MVC pattern.
