@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CyberStore.Models;
+using CyberStore.Models.Database;
 
 namespace CyberStore.Controllers;
 
