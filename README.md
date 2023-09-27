@@ -10,11 +10,11 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 Here's a  list of the key features integrated into my web application.
 
 ------------
-:fa-users: Authentication & Authorization System (Currently being worked on)
+Authentication & Authorization System (Currently being worked on)
 
-- :fa-user: Administrator Role:
-- :fa-user: Moderator Role:
-- :fa-user: Client Role:
+- Administrator Role:
+- Moderator Role:
+- Client Role:
 
 ------------
 
