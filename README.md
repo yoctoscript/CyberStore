@@ -1,3 +1,4 @@
+
 # CyberStore
 An e-commerce web application focused on gaming products, developed using ASP.NET Core and adhering to the MVC architectural pattern.
 
@@ -10,11 +11,15 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 Here's a  list of the key features integrated into my web application.
 
 ------------
-Authentication & Authorization System (Currently being worked on)
+**Authentication & Authorization System** (Currently being worked on)
 
 - Administrator Role:
+	(You can find the credentials inside the `appsettings.json`)
+	- This role has the ability to *create*, *update*, *delete* products and members' information, including their roles.
 - Moderator Role:
+	- This role has the ability to *create*, *update*, *delete* products.
 - Member Role:
+	- This role has the ability to *view* products.
 
 ------------
 
