@@ -25,8 +25,20 @@ public class HomeController : Controller
         return View();
     }
 
-    [Authorize]
-    public IActionResult Confidential()
+    [Authorize(Roles = "Member, Moderator, Administrator")]
+    public IActionResult Member()
+    {
+        return View();
+    }
+
+    [Authorize(Roles = "Moderator, Administrator")]
+    public IActionResult Moderator()
+    {
+        return View();
+    }
+
+    [Authorize(Roles = "Administrator")]
+    public IActionResult Administrator()
     {
         return View();
     }
