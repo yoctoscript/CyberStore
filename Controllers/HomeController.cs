@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CyberStore.Models;
-using CyberStore.Models.Database;
+using CyberStore.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CyberStore.Controllers;
 
@@ -20,6 +21,12 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    [Authorize]
+    public IActionResult Confidential()
     {
         return View();
     }

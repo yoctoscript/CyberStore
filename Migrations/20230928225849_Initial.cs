@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CyberStore.Models.Database.Migrations
+namespace CyberStore.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
