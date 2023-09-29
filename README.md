@@ -19,6 +19,8 @@ Here's a  list of the key features integrated into my web application.
 - Moderator Role:
 	- This role has the ability to *create*, *update*, *delete* products.
 - Member Role:
+	- This role has the ability to *view* products and *add* them to their shoppping cart.
+- Anonymous:
 	- This role has the ability to *view* products.
 
 ------------
