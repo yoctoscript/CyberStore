@@ -14,7 +14,7 @@ Authentication & Authorization System (Currently being worked on)
 
 - Administrator Role:
 - Moderator Role:
-- Client Role:
+- Member Role:
 
 ------------
 

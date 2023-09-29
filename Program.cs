@@ -1,6 +1,7 @@
-using CyberStore.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using CyberStore.Data;
+using CyberStore.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +11,16 @@ builder.Services.AddDbContext<ApplicationRepository>(
 builder.Services.AddDbContext<IdentityRepository>(
     options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<IdentityRepository>();
+builder.Services
+    .AddDefaultIdentity<IdentityUser>()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<IdentityRepository>();
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.Services.CreateRoles().Wait();
 
 if (!app.Environment.IsDevelopment())
 {
