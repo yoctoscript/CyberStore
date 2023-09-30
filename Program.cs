@@ -6,10 +6,10 @@ using CyberStore.Database;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationRepository>(
-    options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options => options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationConnection")));
 
 builder.Services.AddDbContext<IdentityRepository>(
-    options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options => options.UseSqlite(builder.Configuration.GetConnectionString("IdentityConnection")));
 
 builder.Services
     .AddDefaultIdentity<IdentityUser>()
@@ -21,6 +21,8 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 app.Services.CreateRoles().Wait();
+
+app.Services.CreateUsers().Wait();
 
 if (!app.Environment.IsDevelopment())
 {

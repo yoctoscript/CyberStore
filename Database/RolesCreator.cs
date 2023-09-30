@@ -43,5 +43,6 @@ public static class RolesCreator
                 await userManager.AddToRoleAsync(superUser, "Administrator");
             }
         }
+        scope.Dispose();
     }
 }

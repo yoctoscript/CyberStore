@@ -20,25 +20,14 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [Authorize(Roles = "Member, Moderator, Administrator")]
-    public IActionResult Member()
-    {
-        return View();
-    }
-
     [Authorize(Roles = "Moderator, Administrator")]
-    public IActionResult Moderator()
+    public IActionResult Products()
     {
         return View();
     }
 
     [Authorize(Roles = "Administrator")]
-    public IActionResult Administrator()
+    public IActionResult Users()
     {
         return View();
     }

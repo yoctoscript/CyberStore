@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Users";
+}
+@model IEnumerable<UserInfo>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Roles</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.UserName</td>
+            <td>@user.Email</td>
+            <td>@string.Join(", ", user.Roles.ToArray<string>())</td>
+            <td><button type="button" class="btn btn-secondary">View</button></td>
+            <td><button type="button" class="btn btn-warning">Edit</button></td>
+            <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+    }
+</table>

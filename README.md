@@ -11,7 +11,7 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 Here's a  list of the key features integrated into my web application.
 
 ------------
-**Authentication & Authorization System** (Currently being worked on)
+**Authentication & Authorization System**
 
 - Administrator Role:
 	(You can find the credentials inside the `appsettings.json`)
@@ -24,11 +24,10 @@ Here's a  list of the key features integrated into my web application.
 	- This role has the ability to *view* products.
 
 ------------
+**User Management Dashboard** (In Progress)
 
+------------
 
-#### Frameworks:
-- Entity Framework Core
-
-#### Database:
-- SQLite 
+#### Tags:
+C#, .NET 7.0, Entity Framework Core, SQLite
 
