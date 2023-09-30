@@ -7,14 +7,9 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 - ASP.NET Core Runtime 7.0.11
 - Clone the repository and run: `dotnet run`
 
-## Features
-Here's a  list of the key features integrated into my web application.
-
-------------
-**Authentication & Authorization System**
-
+## The Different Roles Existing within the App
 - Administrator Role:
-	(You can find the credentials inside the `appsettings.json`)
+	(You can find the credentials for the administrator account inside the `appsettings.json`)
 	- This role has the ability to *create*, *update*, *delete* products and members' information, including their roles.
 - Moderator Role:
 	- This role has the ability to *create*, *update*, *delete* products.
@@ -23,9 +18,12 @@ Here's a  list of the key features integrated into my web application.
 - Anonymous:
 	- This role has the ability to *view* products.
 
+## Features
+Here's a  list of the key features integrated into my web application.
+------------
+**Authentication & Authorization System**
 ------------
 **User Management Dashboard** (In Progress)
-
 ------------
 
 #### Tags:
