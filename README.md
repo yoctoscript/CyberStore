@@ -1,4 +1,3 @@
-
 # CyberStore
 An e-commerce web application focused on gaming products, developed using ASP.NET Core and adhering to the MVC architectural pattern.
 
@@ -23,7 +22,6 @@ Here's a  list of the key features integrated into my web application.
 
 - [x] Authentication & Authorization System
 - [ ] User Management Dashboard
-
 
 
 #### Tags:
