@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using CyberStore.Data;
 using CyberStore.Database;
+using CyberStore.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 

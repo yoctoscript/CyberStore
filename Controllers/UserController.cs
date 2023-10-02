@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using CyberStore.Models;
+using CyberStore.ViewModels;
 using System.Text.Json;
 
 namespace CyberStore.Controllers;
@@ -23,6 +23,7 @@ public class UserController : Controller
         foreach (var user in userManager.Users)
         {
             var userInfo = new UserInfo();
+            userInfo.Id = user.Id;
             userInfo.Email = user.Email!;
             userInfo.UserName = user.UserName!;
             userInfo.Roles = await userManager.GetRolesAsync(user);
@@ -34,24 +35,40 @@ public class UserController : Controller
     [Authorize(Roles = "Administrator")]
     public IActionResult Create()
     {
-        return View();
+        return View("Create");
     }
 
     [Authorize(Roles = "Administrator")]
-    public IActionResult Read()
+    public async Task<IActionResult> Read(string? id)
     {
-        return View();
+        if (id is not null)
+        {
+            IdentityUser? user = await userManager.FindByIdAsync(id);
+            if (user is not null)
+            {
+                var userInfo = new UserInfo()
+                {
+                    Id = user.Id,
+                    UserName = user.UserName!,
+                    Email = user.Email!,
+                    PhoneNumber = user.PhoneNumber!,
+                    TwoFactorEnabled = user.TwoFactorEnabled
+                };
+                return View("Read", userInfo);
+            }
+        }
+        return NotFound();
     }
 
     [Authorize(Roles = "Administrator")]
-    public IActionResult Update(int id)
+    public IActionResult Update(string? id)
     {
-        return View();
+        return View("Update", id);
     }
 
     [Authorize(Roles = "Administrator")]
-    public IActionResult Delete(int id)
+    public IActionResult Delete(string? id)
     {
-        return View();
+        return View("Delete", id);
     }
 }

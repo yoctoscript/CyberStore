@@ -1,3 +1,34 @@
 @{
     ViewData["Title"] = "Read";
 }
+@model UserInfo
+
+<div class="p-2">
+    <a asp-controller="User" asp-action="Index">
+        <button type="button" class="btn btn-primary">Go Back</button>
+    </a>
+</div>
+<div class="p-2">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td><b>Id</b></td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td><b>Username</b></td>
+            <td>@Model.UserName</td>
+        </tr>
+        <tr>
+            <td><b>Email</b></td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td><b>Phone</b></td>
+            <td>@Model.PhoneNumber</td>
+        </tr>
+        <tr>
+            <td><b>Two Factor Enabled</b></td>
+            <td>@Model.TwoFactorEnabled</td>
+        </tr>
+    </table>
+</div>

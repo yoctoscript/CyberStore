@@ -1,4 +1,4 @@
-using CyberStore.Models;
+using CyberStore.ViewModels;
 using Microsoft.AspNetCore.Identity;
 
 namespace CyberStore.Database;
