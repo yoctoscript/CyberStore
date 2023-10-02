@@ -24,5 +24,5 @@ Here's a  list of the key features integrated into my web application.
 - [ ] User Management Dashboard
 
 
-#### Tags:
+### Tags:
 C#, .NET 7.0, Entity Framework Core, SQLite
