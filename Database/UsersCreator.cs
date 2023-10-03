@@ -13,12 +13,12 @@ public static class UsersCreator
     
         var Users = new List<UserInfo>()
         {
-            new UserInfo() {UserName = "Yumi", Email = "yumi@mail.com", Password = "Yumi123;", Roles = {"Member"}},
-            new UserInfo() {UserName = "Ulrich", Email = "ulrich@mail.com", Password = "Ulrich123;", Roles = {"Member", "Moderator"}},
-            new UserInfo() {UserName = "Della", Email = "della@mail.com", Password = "Della123;", Roles = {"Member"}},
-            new UserInfo() {UserName = "William", Email = "william@mail.com", Password = "William123;", Roles = {"Member"}},
-            new UserInfo() {UserName = "Aelita", Email = "aelita@mail.com", Password = "Aelita123;", Roles = {"Member"}},
-            new UserInfo() {UserName = "Jeremie", Email = "jeremie@gmail.com", Password = "Jeremie123;", Roles = {"Member", "Moderator", "Administrator"}}
+            new UserInfo() {UserName = "Yumi", Email = "yumi@mail.com", Password = "Yumi123;", Roles = new List<string>(){"Member"}},
+            new UserInfo() {UserName = "Ulrich", Email = "ulrich@mail.com", Password = "Ulrich123;", Roles = new List<string>(){"Member", "Moderator"}},
+            new UserInfo() {UserName = "Della", Email = "della@mail.com", Password = "Della123;", Roles = new List<string>(){"Member"}},
+            new UserInfo() {UserName = "William", Email = "william@mail.com", Password = "William123;", Roles = new List<string>(){"Member"}},
+            new UserInfo() {UserName = "Aelita", Email = "aelita@mail.com", Password = "Aelita123;", Roles = new List<string>(){"Member"}},
+            new UserInfo() {UserName = "Jeremie", Email = "jeremie@gmail.com", Password = "Jeremie123;", Roles = new List<string>(){"Member", "Moderator", "Administrator"}}
         };
 
         foreach (var user in Users)
@@ -30,10 +30,7 @@ public static class UsersCreator
                 var createUser = await userManager.CreateAsync(identityUser, user.Password!);
                 if (createUser.Succeeded)
                 {
-                    foreach (var role in user.Roles)
-                    {
-                        await userManager.AddToRoleAsync(identityUser, role);
-                    }
+                    await userManager.AddToRolesAsync(identityUser, user.Roles);
                 }
             }
         }

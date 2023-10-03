@@ -30,8 +30,16 @@
                         <button type="button" class="btn btn-secondary">View</button>
                     </a>
                 </td>
-                <td><button type="button" class="btn btn-warning">Edit</button></td>
-                <td><button type="button" class="btn btn-danger">Delete</button></td>
+                <td>
+                    <a asp-controller="User" asp-action="Update" asp-route-id="@user.Id">
+                        <button type="submit" class="btn btn-warning">Edit</button>
+                    </a>
+                </td>
+                <td> 
+                    <a asp-controller="User" asp-action="Delete" asp-route-id="@user.Id">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
             </tr>
         }
     </table>

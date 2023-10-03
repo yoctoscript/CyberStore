@@ -1,3 +1,87 @@
 @{
-    ViewData["Title"] = "Update";
+    ViewData["Title"] = "Edit";
 }
+@model UserInfo
+
+<div class="p-2">
+    <a asp-controller="User" asp-action="Index">
+        <button type="button" class="btn btn-primary">Go Back</button>
+    </a>
+</div>
+
+<div class="p-2">
+    <form asp-controller="User" asp-action="Update" method="post">
+        <input type="hidden" asp-for="Password" value="StrongPassword123;">
+        <div class="form-group">
+            <label asp-for="UserName" class="form-label">Username:</label>
+            <span asp-validation-for="UserName" class="text-danger"></span>
+            <input asp-for="UserName" class="form-control" value="@Model.UserName">
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="form-label">Email:</label>
+            <input asp-for="Email" class="form-control" value="@Model.Email">
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="form-label">Phone:</label>
+            <input asp-for="PhoneNumber" class="form-control" value="@Model.PhoneNumber">
+        </div>
+        <div class="form-group">
+            <label asp-for="TwoFactorEnabled" class="form-label">Two Factor Enabled:</label>
+            <span class="form-check">
+                @if((bool)Model.TwoFactorEnabled)
+                {
+                    <input type="radio" asp-for="TwoFactorEnabled" class="form-check-input" value="true" id="twoFactorEnabledYes" checked>
+                }
+                else
+                {
+                    <input type="radio" asp-for="TwoFactorEnabled" class="form-check-input" value="true" id="twoFactorEnabledYes">
+                }
+                <label class="form-check-label" for="twoFactorEnabledYes">Yes</label>
+            </span>
+            <span class="form-check">
+                @if(!(bool)Model.TwoFactorEnabled)
+                {
+                    <input type="radio" asp-for="TwoFactorEnabled" class="form-check-input" value="false" id="twoFactorEnabledNo" checked>
+                }
+                else
+                {
+                    <input type="radio" asp-for="TwoFactorEnabled" class="form-check-input" value="false" id="twoFactorEnabledNo">
+                }
+                <label class="form-check-label" for="twoFactorEnabledNo">No</label>
+            </span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Roles" class="form-label">Roles:</label>
+            <span asp-validation-for="Roles" class="text-danger"></span>
+            <select asp-for="Roles" class="form-control" multiple>
+                @if(Model.Roles.Contains("Member"))
+                {
+                    <option value="Member" selected>Member</option>
+                }
+                else
+                {
+                    <option value="Member">Member</option>
+                }
+                @if(Model.Roles.Contains("Moderator"))
+                {
+                    <option value="Moderator" selected>Moderator</option>
+                }
+                else
+                {
+                    <option value="Moderator">Moderator</option>
+                }
+                @if(Model.Roles.Contains("Administrator"))
+                {
+                    <option value="Administrator" selected>Administrator</option>
+                }
+                else
+                {
+                    <option value="Administrator">Administrator</option>
+                }
+            </select>
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
