@@ -46,7 +46,7 @@ public class UserController : Controller
     {
         if (ModelState.IsValid)
         {
-            var identityUser = new IdentityUser() {UserName = userInfo.UserName, Email = userInfo.Email};
+            var identityUser = new IdentityUser() {UserName = userInfo.UserName, Email = userInfo.Email, PhoneNumber = userInfo.PhoneNumber, TwoFactorEnabled = (bool)userInfo.TwoFactorEnabled};
             var _u = await userManager.FindByNameAsync(userInfo.UserName);
             if (_u is not null)
             {

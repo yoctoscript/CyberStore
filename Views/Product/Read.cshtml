@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Read";
+}
+@model Product
+<div class="p-2">
+    <a asp-controller="Product" asp-action="Index">
+        <button type="button" class="btn btn-primary">Go Back</button>
+    </a>
+
+</div>
+<div class="p-2">
+    <img src="@Model.Image" alt="@Model.Name" width="400" height="400">
+</div>
+
+<div class="p-2">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td><b>Name</b></td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>@Model.Description</td>
+        </tr>
+        <tr>
+            <td><b>Price</b></td>
+            <td>@($"{Model.Price:C2}")</td>
+        </tr>
+        <tr>
+            <td><b>Category</b></td>
+            <td>@Model.Category</td>
+        </tr>
+        <tr>
+            <td><b>SKU</b></td>
+            <td>@Model.SKU</td>
+        </tr>
+        <tr>
+            <td><b>Brand</b></td>
+            <td>@Model.Brand</td>
+        </tr>
+        <tr>
+            <td><b>Is Available</b></td>
+            <td>@Model.IsAvailable</td>
+        </tr>
+    </table>
+</div>

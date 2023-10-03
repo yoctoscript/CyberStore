@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Products";
+}
+
+@model IEnumerable<Product>
+
+<div class="p-2">
+    <a asp-controller="Product" asp-action="Create">
+        <button type="button" class="btn btn-success">Create Product</button>
+    </a>
+</div>
+
+<div class="p-2">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach(var product in @Model)
+        {
+            <tr>
+                <td><img src="@product.Image" alt="@product.Name" width="100" height="100"></td>
+                <td>@product.Name</td>
+                <td>@($"{product.Price:C2}")</td>
+                <td>@product.Category</td>
+                <td>
+                    <a asp-controller="Product" asp-action="Read" asp-route-id="@product.Id">
+                        <button type="button" class="btn btn-secondary">View</button>
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Product" asp-action="Update" asp-route-id="@product.Id">
+                        <button type="button" class="btn btn-warning">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

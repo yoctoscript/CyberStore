@@ -3,16 +3,19 @@ using System;
 using CyberStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CyberStore.Migrations
+namespace CyberStore.Migrations.ApplicationRepositoryMigrations
 {
     [DbContext(typeof(ApplicationRepository))]
-    partial class ApplicationRepositoryModelSnapshot : ModelSnapshot
+    [Migration("20231003162845_Application130")]
+    partial class Application130
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");
@@ -33,6 +36,7 @@ namespace CyberStore.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
+                        .HasMaxLength(75)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Image")
@@ -45,6 +49,7 @@ namespace CyberStore.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(75)
                         .HasColumnType("TEXT");
 
                     b.Property<float?>("Price")

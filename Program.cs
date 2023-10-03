@@ -24,6 +24,7 @@ var app = builder.Build();
 app.Services.CreateRoles().Wait();
 
 app.Services.CreateUsers().Wait();
+app.Services.CreateProducts();
 
 if (!app.Environment.IsDevelopment())
 {

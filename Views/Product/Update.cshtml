@@ -1,0 +1,78 @@
+@{
+    ViewData["Title"] = "Update";
+}
+@model Product
+
+<div class="p-2">
+    <a asp-controller="Product" asp-action="Index">
+        <button type="Button" class="btn btn-primary">Go Back</button>
+    </a>
+</div>
+
+<div class="p-2"> 
+    <form asp-controller="Product" asp-action="Update" asp-route-id="@Model.Id" method="post">
+        <div class="form-group">
+            <label asp-for="Name" class="form-label">Name:</label>
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <input asp-for="Name" class="form-control" value="@Model.Name">
+        </div>
+        <div class="form-group"> 
+            <label asp-for="Description" class="form-label">Description:</label>
+            <span asp-validation-for="Description" class="text-danger"></span>
+            <textarea asp-for="Description" class="form-control" rows="4" value="@Model.Description"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="form-label">Price</label>
+            <span asp-validation-for="Price" class="text-danger"></span>
+            <input asp-for="Price" class="form-control" value="@Model.Price">
+        </div>
+        <div class="form-group">
+            <label asp-for="Category" class="form-label">Category:</label>
+            <span asp-validation-for="Category" class="text-danger"></span>
+            <input asp-for="Category" class="form-control" value="@Model.Category">
+        </div>
+        <div class="form-group">
+            <label asp-for="Image" class="form-label">Image URL:</label>
+            <span asp-validation-for="Image" class="text-danger"></span>
+            <input asp-for="Image" class="form-control" value="@Model.Image">
+        </div>
+        <div class="form-group">
+            <label asp-for="SKU" class="form-label">SKU:</label>
+            <span asp-validation-for="SKU" class="text-danger"></span>
+            <input asp-for="SKU" class="form-control" value="@Model.SKU">
+        </div>
+        <div class="form-group">
+            <label asp-for="Brand" class="form-label">Brand:</label>
+            <span asp-validation-for="Brand" class="text-danger"></span>
+            <input asp-for="Brand" class="form-control" value="@Model.Brand">
+        </div>
+        <div class="form-group">
+            <label asp-for="IsAvailable" class="form-label">Is Available:</label>
+            <div class="form-check">
+                @if((bool)Model.IsAvailable)
+                {
+                    <input type="radio" asp-for="IsAvailable" class="form-check-input" value="true" id="IsAvailableYes" checked>
+                }
+                else
+                {
+                    <input type="radio" asp-for="IsAvailable" class="form-check-input" value="true" id="IsAvailableYes">
+                }
+                <label class="form-check-label" for="IsAvailableYes">Yes</label>
+            </div>
+            <div class="form-check">
+                @if(!(bool)Model.IsAvailable)
+                {
+                    <input type="radio" asp-for="IsAvailable" class="form-check-input" value="false" id="IsAvailableNo" checked>
+                }
+                else
+                {
+                    <input type="radio" asp-for="IsAvailable" class="form-check-input" value="false" id="IsAvailableNo">
+                }
+                <label class="form-check-label" for="IsAvailableNo">No</label>
+            </div>
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

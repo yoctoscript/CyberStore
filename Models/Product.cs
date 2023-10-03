@@ -5,33 +5,27 @@ namespace CyberStore.Models;
 public class Product
 {
     [Key]
-    public Guid Id {get; set;}
+    public Guid? Id {get; set;}
     [Required]
-    [MinLength(5, ErrorMessage = "Too short of a name")]
-    [MaxLength(75)]
-    public string Name {get; set;} = string.Empty;
+    public string? Name {get; set;}
     [Required]
-    [MinLength(5, ErrorMessage = "Too short of a description")]
-    [MaxLength(75)]
-    public string Description {get; set;} = string.Empty;
+    public string? Description {get; set;}
     [Required]
-    public float Price {get; set;}
+    [DataType(DataType.Currency)]
+    [Range(0.0f, float.MaxValue)]
+    public float? Price {get; set;}
     [Required]
-    public Category Category {get; set;} = new();
+    public string? Category {get; set;}
     [Required]
-    public List<Image> Images {get; set;} = new();
-    public string SKU {get; set;} = string.Empty;
-    public string Brand {get; set;} = string.Empty;
-    public List<Feedback> Feedbacks {get; set;} = new();
-    public List<Tag> Tags {get; set;} = new();
-    public bool IsAvailable {get; set;}
+    public string? Image {get; set;}
+    [Required]
+    public string? SKU {get; set;}
+    [Required]
+    public string? Brand {get; set;}
+    public List<Feedback>? Feedbacks {get; set;}
+    [Required]
+    public bool? IsAvailable {get; set;}
 
-    public class Image
-    {
-        [Key]
-        public Guid Id {get; set;}
-        public string Url {get; set;} = string.Empty;
-    }
     public class Tag
     {
         [Key]
