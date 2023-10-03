@@ -15,5 +15,5 @@ namespace CyberStore.ViewModels;
     public string? PhoneNumber {get; set;}
     public bool? TwoFactorEnabled {get; set;}
     [Required(ErrorMessage = "Please select the role(s)")]
-    public List<string> Roles {get; set;}
+    public List<string>? Roles {get; set;}
 }

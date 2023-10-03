@@ -24,13 +24,13 @@ public static class UsersCreator
         foreach (var user in Users)
         {
             var identityUser = new IdentityUser() {UserName = user.UserName, Email = user.Email};
-            var _u = await userManager.FindByEmailAsync(user.Email);
+            var _u = await userManager.FindByEmailAsync(user.Email!);
             if (_u is null)
             {
                 var createUser = await userManager.CreateAsync(identityUser, user.Password!);
                 if (createUser.Succeeded)
                 {
-                    await userManager.AddToRolesAsync(identityUser, user.Roles);
+                    await userManager.AddToRolesAsync(identityUser, user.Roles!);
                 }
             }
         }

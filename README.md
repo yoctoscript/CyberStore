@@ -21,8 +21,8 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 Here's a  list of the key features integrated into my web application.
 
 - [x] Authentication & Authorization System
-- [ ] User Management Dashboard
-
+- [x] User Management Dashboard
+- [ ] Product Management Dashboard
 
 ### Tags:
 C#, .NET 7.0, Entity Framework Core, SQLite
