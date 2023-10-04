@@ -23,7 +23,8 @@ Here's a  list of the key features integrated into my web application.
 - [x] Authentication & Authorization System
 - [x] User Management Dashboard
 - [x] Product Management Dashboard
-- [ ] Home Page Product Display with Pagination
+- [x] Home Page Product Display with Pagination
+- [ ] Shopping Cart and Checkout System
 
 ### Tags:
 C#, .NET 7.0, Entity Framework Core, SQLite
