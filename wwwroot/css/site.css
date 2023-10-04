@@ -18,5 +18,36 @@ html {
 }
 
 body {
+  background-color: white;
   margin-bottom: 60px;
+}
+
+
+@font-face{
+  font-family: Evolve;
+  src: url('/fonts/evolve.otf') format("opentype");
+}
+
+@font-face{
+  font-family: EvolveNormal;
+  src: url('/fonts/evolve_normal.otf') format("opentype");
+}
+
+
+#store {
+  font-family: Evolve;
+  font-size: xx-large;
+  color: aqua;
+}
+
+#titles
+{
+  font-family: EvolveNormal;
+  font-size: x-large;
+}
+
+#logout
+{
+  font-family: EvolveNormal;
+  font-size: x-large; 
 }

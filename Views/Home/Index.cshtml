@@ -1,7 +1,51 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
+@model IEnumerable<Product>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to CyberStore (In Progress)</h1>
+<div class="row">
+    @foreach(var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card bg-light mb-3 border-gray">
+                <img class="card-img-top" src="@product.Image" alt="@product.Name" height="400">
+                <div class="card-body bg-dark text-white">
+                    <h6 class="card-title">@product.Name</h6>
+                    <p class="card-text">Category: @product.Category</p>
+                    <p class="card-text">@($"Price: {product.Price:C2}")</p>
+                    <p class="card-text">Available: @((bool)product.IsAvailable ? "Yes" : "No")</p>
+                @if((bool)product.IsAvailable)
+                {
+                    <a asp-controller="Cart" asp-action="Add">
+                        <button type="button" class="btn btn-success">Add to Cart</button>
+                    </a>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-secondary disabled">Add to Cart</button>
+                }
+                </div>
+            </div>
+        </div>
+    }
 </div>
+
+<nav>
+    <ul class="pagination justify-content-center">
+        @for(int i = 0; i < (int)ViewData["Pages"]; ++i)
+        {
+            @if(i == (int)ViewData["Id"])
+            {
+                <li class="page-item active">
+                    <a class="page-link" asp-controller="Home" asp-action="Index" asp-route-id="@i">@(i+1)</a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item">
+                    <a class="page-link" asp-controller="Home" asp-action="Index" asp-route-id="@i">@(i+1)</a>
+                </li>
+            }
+        }
+    </ul>
+</nav>

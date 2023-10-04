@@ -3,33 +3,30 @@ using Microsoft.AspNetCore.Mvc;
 using CyberStore.Models;
 using CyberStore.Data;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace CyberStore.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationRepository applicationRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ApplicationRepository applicationRepository)
     {
-        _logger = logger;
+        this.applicationRepository = applicationRepository;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(int id=0)
     {
-        return View();
-    }
-
-    [Authorize(Roles = "Moderator, Administrator")]
-    public IActionResult Products()
-    {
-        return View();
-    }
-
-    [Authorize(Roles = "Administrator")]
-    public IActionResult Users()
-    {
-        return View();
+        var itemsPerPage = 9;
+        var query = applicationRepository.Products.AsNoTracking().OrderBy(p => p.Id).Skip(id * itemsPerPage).Take(itemsPerPage);
+        IEnumerable<Product> products = query.ToList();
+        var count = query.Count();
+        var pages = ((count % itemsPerPage) == 0) ? (count/itemsPerPage) : ((count / itemsPerPage) + 1); 
+        ViewData["Pages"] = pages;
+        ViewData["Id"] = id;
+        return View("Index", products);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
