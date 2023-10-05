@@ -16,7 +16,7 @@
                     <p class="card-text">Available: @((bool)product.IsAvailable ? "Yes" : "No")</p>
                 @if((bool)product.IsAvailable)
                 {
-                    <a asp-controller="Cart" asp-action="Add">
+                    <a asp-controller="Cart" asp-action="Cart" asp-route-item-guid="@product.Id.ToString()" asp-route-page-id=@(((int)ViewData["Id"]!).ToString())>
                         <button type="button" class="btn btn-success">Add to Cart</button>
                     </a>
                 }

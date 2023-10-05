@@ -5,15 +5,16 @@ namespace CyberStore.ViewModels;
  public class UserInfo
 {
     public string? Id {get; set;}
-    [Required(ErrorMessage = "Please enter a username")]
+    [Required(ErrorMessage = "Please enter a username.")]
     public string? UserName {get; set;}
+    [EmailAddress]
     public string? Email {get; set;}
-    [Required(ErrorMessage = "Please enter a password")]
+    [Required(ErrorMessage = "Please enter a password.")]
     [DataType(DataType.Password)]
     public string? Password {get; set;}
-    [Phone]
+    [Phone(ErrorMessage = "Please provide a valid phone number.")]
     public string? PhoneNumber {get; set;}
     public bool? TwoFactorEnabled {get; set;}
-    [Required(ErrorMessage = "Please select the role(s)")]
+    [Required(ErrorMessage = "Please select at least one role.")]
     public List<string>? Roles {get; set;}
 }

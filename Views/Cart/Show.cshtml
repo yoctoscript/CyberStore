@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Show";
+}
+@model IEnumerable<Product>
+
+<div class="p-2">
+    <a asp-controller="Home" asp-action="Index">
+        <button type="button" class="btn btn-primary">Go Back</button>
+    </a>
+</div>
+
+@if(Model.Count() == 0)
+{
+    <br>
+    <br>
+    <br>
+    <div class="text-center">
+        <h1>Your shopping cart is empty!</h1>
+    </div>
+}
+else
+{
+    <div class="p-2">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th></th>
+                <th>Item Name</th>
+                <th>Action</th>
+            </tr>
+            @foreach(var product in Model)
+            {
+                <tr>
+                    <td><img src="@product.Image" alt="@product.Name" width="100" height="100"></td>
+                    <td>@product.Name</td>
+                    <td>
+                        <a asp-controller="Cart" asp-action="Remove" asp-route-guid="@product.Id">
+                            <button type="button" class="btn btn-danger">Remove</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <div class="p-2">
+        <a asp-controller="Cart" asp-action="Checkout">
+            <button type="button" class="btn btn-success">Checkout</button>
+        </a>
+    </div>
+}
+

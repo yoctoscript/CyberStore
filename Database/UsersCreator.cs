@@ -7,7 +7,8 @@ public static class UsersCreator
 {
     
     public static List<UserInfo> Users = new()
-    {
+    {   
+        new UserInfo() {UserName = "Member", Email = "member@mail.com", Password = "Sudo123;", TwoFactorEnabled = true, PhoneNumber = "", Roles = new List<string>(){"Member"}},
         new UserInfo() {UserName = "Moderator", Email = "moderator@mail.com", Password = "Sudo123;", TwoFactorEnabled = true, PhoneNumber = "", Roles = new List<string>(){"Moderator"}},
         new UserInfo() {UserName = "SebastianMorgans", Email = "SebastianMorgans@jourrapide.com", Password = "ahDahxee2ch;", PhoneNumber = "559-527-5804", TwoFactorEnabled = true, Roles = new List<string>(){"Member"}},
         new UserInfo() {UserName = "SummerMelbourne", Email = "SummerMelbourne@rhyta.com", Password = "oop4oaB9ie;", PhoneNumber = "512-308-2034", TwoFactorEnabled = false, Roles = new List<string>(){"Member"}},

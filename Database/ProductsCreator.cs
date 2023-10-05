@@ -153,6 +153,130 @@ Military-grade capacitors rated for 20K hours at 105C make the GPU power rail mo
             SKU = "B0BZTDZL7J",
             Brand = "ASUS",
             IsAvailable = false
+        },
+        new Product()
+        {
+            Id = new Guid("ca170529-fdab-4fcf-8e84-dd6e20f6767a"),
+            Name = "Corsair VENGEANCE RGB PRO DDR4 32GB (2x16GB) 3200MHz CL16 Intel XMP 2.0 iCUE Compatible Computer Memory - Black (CMW32GX4M2E3200C16)",
+            Description = 
+@"Dynamic Multi-Zone RGB Lighting: 10 Ultra-bright RGB LEDs per module.
+Take control in CORSAIR iCUE software and synchronize lighting with other CORSAIR RGB products, including CPU coolers, keyboards and fans.
+Custom Performance PCB provides the highest signal quality for the greatest level of performance and stability.
+Tightly Screened Memory: Carefully screened ICs for extended overclocking potential.
+Maximum Bandwidth and Tight Response Times Optimized for peak performance on the latest Intel and AMD DDR4 motherboards.
+Requires no extra wires or cables for a clean and seamless install.
+Supports XMP 2.0: A single BIOS setting is all that’s required to set your memory to its ideal performance settings, for for optimum performance.
+SPD Latency: 15-15-15-36",
+            Price = 77.99f,
+            Category = "Computer Memory",
+            Image = "https://m.media-amazon.com/images/I/71e6YWJio-L._AC_SX679_.jpg",
+            SKU = "B081XWLQKS",
+            Brand = "Corsair",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("adfa7157-51db-40bf-a868-f9cd082cc10d"),
+            Name = "Corsair VENGEANCE RGB PRO SL DDR4 32GB (2x16GB) 3600MHz CL18 Intel XMP 2.0 AMD Ryzen iCUE Compatible Computer Memory - White (CMH32GX4M2D3600C18W)",
+            Description = 
+@"Illuminate your system with vivid, animated lighting from ten individually addressable, ultra-bright RGB LEDs per module.
+Choose from dozens of preset lighting profiles, or create your own in CORSAIR iCUE software.
+Just 44mm tall for wide compatibility with air coolers such as the CORSAIR A500.
+Optimized for maximum bandwidth and tight response times on the latest Intel and AMD DDR4 motherboards.
+A custom performance PCB provides the highest signal quality for the greatest level of performance and stability.
+VENGEANCE RGB PRO SL modules use only tightly screened memory chips, for extended overclocking potential.
+Take control with CORSAIR iCUE software and synchronize lighting with other CORSAIR RGB products, including coolers, keyboards and fans.",
+            Price = 89.99f,
+            Category = "Computer Memory",
+            Image = "https://m.media-amazon.com/images/I/61ks5I-TN1L._AC_SX679_.jpg",
+            SKU = "B08SQRF8MJ",
+            Brand = "Corsair",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("6697659a-01aa-476a-aff3-a733748f3c88"),
+            Name = "Crucial RAM 32GB Kit (2x16GB) DDR5 5600MHz (or 5200MHz or 4800MHz) Laptop Memory CT2K16G56C46S5, Black",
+            Description = 
+@"5600MT/s RAM can downclock if system specification only supports 5200MT/s or 4800MT/s
+Best for 13th Gen Intel Core and AMD Ryzen 7000 Series processors
+Intel XMP 3.0 and AMD EXPO supported on the same module
+Enhance productivity, save time and money, game at higher frame rates, multitask better
+ECC Type = Non-ECC, Form Factor = SODIMM, Pin Count = 262-Pin, PC Speed = PC5-44800, Voltage = 1.1V, Rank And Configuration = 1Rx8",
+            Price = 83.69f,
+            Category = "Computer Memory",
+            Image = "https://m.media-amazon.com/images/I/71k-boqf32L._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg",
+            SKU = "B0BLTDRRLF",
+            Brand = "Crucial",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("bd64f33a-8cb2-495d-bc0e-47859e8c87dd"),
+            Name = "Asus ROG Strix B550-F Gaming WiFi II AMD AM4 (3rd Gen Ryzen) ATX Motherboard (PCIe 4.0,WiFi 6E, 2.5Gb LAN, BIOS Flashback, HDMI 2.1, Addressable Gen 2 RGB Header and Aura Sync)",
+            Description = 
+@"AM4 socket: Ready for AMD Ryzen 3000 and 5000 series, plus 5000 and 4000 G-series desktop processors.Bluetooth v5.2
+Best gaming connectivity: PCIe 4.0-ready, dual M.2 slots, USB 3.2 Gen 2 Type-C, plus HDMI 2.1 and DisplayPort 1.2 output
+Smooth networking: On-board WiFi 6E (802.11ax) and Intel 2.5 Gb Ethernet with ASUS LANGuard
+Robust power solution: 12+2 teamed power stages with ProCool power connector, high-quality alloy chokes and durable capacitors
+Renowned software: Bundled 60 days AIDA64 Extreme subscription and intuitive UEFI BIOS dashboard",
+            Price = 180.99f,
+            Category = "Motherboard",
+            Image = "https://m.media-amazon.com/images/I/813WBwlPh+L._AC_SX679_.jpg",
+            SKU = "B09GP7P1XS",
+            Brand = "ASUS",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("8e874297-199f-4f7c-9875-c896aefd813a"),
+            Name = "MSI A520M-A PRO Gaming Motherboard (AMD AM4, DDR4, PCIe 3.0, SATA 6Gb/s, M.2, USB 3.2 Gen 1, DVI/HDMI, Micro-ATX)",
+            Description = 
+@"Support 3rd Gen AMD Ryzen Desktop Processors and AMD Ryzen 4000 G-Series Desktop Processors
+Supports DDR4 Memory, up to 4600(OC) MHz
+Turbo M.2: Running at PCI-E Gen3 x4 maximizes performance for NVMe based SSDs
+Audio Boost: Reward your ears with studio grade sound quality
+Dragon Center: A brand new software which integrates all MSI exclusive tools with user friendly user interface",
+            Price = 63.99f,
+            Category = "Motherboard",
+            Image = "https://m.media-amazon.com/images/I/81LKKjLD1pL._AC_SX679_.jpg",
+            SKU = "B08GY3W5S8",
+            Brand = "MSI",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("25879069-76d2-4c6d-9f80-41f31b755681"),
+            Name = "GIGABYTE B550M DS3H AC (AM4 AMD/B550/Micro ATX/Dual M.2/SATA 6Gb/s/USB 3.2 Gen 1/PCIe 4.0/HMDI/DVI/DDR4/Motherboard)",
+            Description = 
+@"Supports AMD Ryzen 5000 Series/ 3rd Gen Ryzen and 3rd Gen Ryzen with Radeon Graphics Processors
+Dual Channel ECC/ Non-ECC Unbuffered DDR4, 4 DIMMs
+5+3 Phases Pure Digital VRM Solution with Low RDS(on) MOSFETs
+Ultra Durable PCIe 4.0 Ready x16 Slot
+Dual Ultra-Fast NVMe PCIe 4.0/3.0 M.2 Connectors",
+            Price = 109.99f,
+            Category = "Motherboard",
+            Image = "https://m.media-amazon.com/images/I/61Pl0vNGwKL._AC_SX425_.jpg",
+            SKU = "B08R5736B3",
+            Brand = "Gigabyte",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("e9544553-45f9-40a6-afd9-bc7091f121b6"),
+            Name = "ASUS Prime B550-PLUS AMD AM4 Zen 3 Ryzen 5000 & 3rd Gen Ryzen ATX Motherboard (PCIe 4.0, ECC Memory, 1Gb LAN, HDMI 2.1, DisPlayPort 1.2 (4K@60HZ), Addressable Gen 2 RGB Header and Aura Sync)",
+            Description = 
+@"AMD AM4 Socket and PCIe 4. 0: The perfect pairing for Zen 3 Ryzen 5000 & 3rd Gen AMD Ryzen CPUs
+Ultrafast Connectivity: 1x PCIe4. 0 x16 SafeSlot, 1Gb LAN, dual M. 2 slots (NVMe SSD)—one with PCIe 4. 0 x4 connectivity, USB 3. 2 Gen 2 Type-A , HDMI 2. 1, 4K@60HZ, DisPlay port 1. 2 and Thunderbolt 3 header
+Comprehensive Cooling: VRM heatsink, chipset heatsink, hybrid fan headers and Fan Xpert 2 utility
+5X Protection III: all-round protection with LANGuard, DRAM overcurrent protection, overvoltage protection, SafeSlot Core safeguards and stainless-steel back I/O
+Boosted Memory Performance: ASUS OptiMem proprietary trace layout allows memory kits to operate at higher frequencies with lower voltages to maximize system performance.",
+            Price = 129.99f,
+            Category = "Motherboard",
+            Image = "https://m.media-amazon.com/images/I/91bMWZiA3SL._AC_SX679_.jpg",
+            SKU = "B089CT5GDM",
+            Brand = "ASUS",
+            IsAvailable = false
         }
     };
 

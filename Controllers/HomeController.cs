@@ -19,6 +19,15 @@ public class HomeController : Controller
 
     public IActionResult Index(int id=0)
     {
+        var cartId = HttpContext.Request.Cookies["CartId"];
+        if (cartId is null)
+        {
+            cartId = Guid.NewGuid().ToString();
+            HttpContext.Response.Cookies.Append("CartId", cartId);
+        }
+        ViewData["CartId"] = cartId;
+
+
         var itemsPerPage = 9;
         var query = applicationRepository.Products.AsNoTracking().OrderBy(p => p.Id).Skip(id * itemsPerPage).Take(itemsPerPage);
         IEnumerable<Product> products = query.ToList();
@@ -26,6 +35,9 @@ public class HomeController : Controller
         var pages = ((count % itemsPerPage) == 0) ? (count/itemsPerPage) : ((count / itemsPerPage) + 1); 
         ViewData["Pages"] = pages;
         ViewData["Id"] = id;
+
+        ViewData["Total"] = 50.5f;
+        ViewData["Items"] = 6;
         return View("Index", products);
     }
 

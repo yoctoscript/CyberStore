@@ -50,7 +50,7 @@ public class UserController : Controller
             var _u = await userManager.FindByNameAsync(userInfo.UserName);
             if (_u is not null)
             {
-                ModelState.AddModelError("Username","Username already exists in the database, choose a different one");
+                ModelState.AddModelError("Username","Username already exists in the database. Please select a different one.");
                 return View("Create", userInfo);
             }
             if (_u is null)

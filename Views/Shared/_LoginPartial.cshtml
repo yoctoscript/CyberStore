@@ -1,11 +1,77 @@
 @using Microsoft.AspNetCore.Identity
-
+@using CyberStore.Data
+@using CyberStore.Models
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
+@inject ApplicationRepository ApplicationRepository
+
+@{
+    var title = string.Empty;
+    bool hasCartId = ViewData.TryGetValue("CartId", out object myObject);
+    if (hasCartId)
+    {  
+        var cartId = ViewData["CartId"].ToString();
+        if(!CartRepository.Carts.ContainsKey(cartId))
+        {
+            CartRepository.Carts.Add(cartId, new());
+            title = $"{0:C2}";
+        }
+        else if(CartRepository.Carts[cartId] is null)
+        {
+            CartRepository.Carts[cartId] = new();
+            title = $"{0:C2}";
+        }
+        else if(CartRepository.Carts[cartId].Count == 0)
+        {
+            title = $"{0:C2}";
+        }
+        else if (CartRepository.Carts[cartId].Count == 1)
+        {
+            var productId = new Guid(CartRepository.Carts[cartId].First());
+            var product = (Product)ApplicationRepository.Find(typeof(Product), productId);
+            if (product is null)
+            {
+                title = $"{0:C2}";
+            }
+            else
+            {
+                title = $"{product.Price:C2} (1 item)";
+            }
+        }
+        else if (CartRepository.Carts[cartId].Count > 1)
+        {
+            float price = 0f;
+            int items = 0;
+            foreach (var productId in CartRepository.Carts[cartId])
+            {
+                
+                var product = (Product)ApplicationRepository.Find(typeof(Product), new Guid(productId));
+                if (product is not null)
+                {
+                    price += (float)product.Price;
+                    items++;
+                }
+            }
+            title = $"{price:C2} ({items} items)";
+        }
+
+    }
+    
+
+    //@($"{ViewData["Total"]:C2} " + (((int)ViewData["Items"]) > 0 ? (((int)ViewData["Items"]) == 1 ? $"({ViewData["Items"]} item)" : $"({ViewData["Items"]} items)"): ""))
+}
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {   
+    if(hasCartId)
+    {
+        <div class="ms-auto">
+        <li class="nav-item">
+            <a class="nav-link text-warning font-weight-bold" asp-controller="Cart" asp-action="Show">@title</a>
+        </li>
+        </div>
+    }
     <div class="ms-auto">
         <li class="nav-item">
             <a id="manage" class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">PROFILE</a>
