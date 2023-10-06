@@ -27,11 +27,10 @@ x²
 - [x] Home Page Product Display with Pagination
 - [x] Shopping Cart and Checkout System
 
-## Preview
-[![Watch the video](thumbnail.png)](https://youtu.be/zDk_fEP9v9s?si=bUpubq3EZqUbi58y)
+## Preview (YouTube)
+[![Youtube Link](https://youtu.be/zDk_fEP9v9s?si=bUpubq3EZqUbi58y)](https://youtu.be/zDk_fEP9v9s?si=bUpubq3EZqUbi58y)
 
-[<img src="thumbnail.png"
-/>](https://youtu.be/zDk_fEP9v9s?si=bUpubq3EZqUbi58y)
+
 
 ### Tags:
 C#, .NET 7.0, Entity Framework Core, SQLite
