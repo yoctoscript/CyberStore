@@ -20,7 +20,7 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 
 ## Features
 Here's a  list of the key features integrated into my web application.
-x²
+
 - [x] Authentication & Authorization System
 - [x] User Management Dashboard
 - [x] Product Management Dashboard
