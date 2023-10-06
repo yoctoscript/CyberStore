@@ -277,6 +277,74 @@ Boosted Memory Performance: ASUS OptiMem proprietary trace layout allows memory 
             SKU = "B089CT5GDM",
             Brand = "ASUS",
             IsAvailable = false
+        },
+        new Product()
+        {
+            Id = new Guid("6ab88d84-b3cf-45f3-b4bf-2cc0b2ff454e"),
+            Name = "SANSUI Monitor 24 inch 100Hz IPS USB Type-C FHD 1080P Computer Display Built-in Speakers HDMI DP HDR10 Game RTS/FPS Tilt Adjustable for Working and Gaming (ES-24X3 Type-C & HDMI Cable Included)",
+            Description = 
+@"SANSUI 24-inch monitor with 100Hz refresh rates and freesync can reject blur, jitter, tearing and ghosting in fast-paced action. Bring a smooth office enjoyment for you. RTS/FPS/RACING/Screen Assistance game modes also enhance the gaming experience and make PC gamers feel more immersive.
+Visual Enjoyment and Unfettered ViewingThe FHD 1080p monitor 24 inch with IPS panel and three-sided edgeless design gives you clear and bright images. 178° wide viewing angle allow you to get more details and enjoy panoramic viewing.A richer level of light and dark picture has been supported by HDR10. 99.99% SRGB (72% NTSC) and 16.7M display colors make the image more vivid and rich for your perfect enjoyment.
+Multiple Ports and Flexible ConnectivityJust one USB Type-C cable is needed to connect your USB C devices such as PCs, laptops, tablets, phones, game consoles, and more, allowing you screen sharing, image or video editing, movie watching and game playing freely. The 24 inch display with HDMI and DP ports allows quick connection to various devices for multimedia setups. The built-in speakers free up desk space and provide quality audio.
+Eye Protection and Ergonomic Design】The 1080p monitor with Anti-Bluelight reduces harmful blue light during prolonged use, which can reduce eye strain. Anti-glare and anti-flicker technology eliminates irritating screen flicker for better eye protection. 24-inch monitor mounts for quick installation and removal, supports 75*75mm VESA mount with four M4 x 8 mm screw holes. Tilt 5 degrees forward and 15 degrees back to give you the best viewing angle.
+Worry-Free After-Sales】Enjoy the Amazon Guarantee to get your money back or replacement within 30 days. We are committed to a 12-month warranty and lifetime free technical support. Any damage, malfunction or missing accessories, please feel free to contact us.",
+            Price = 90.77f,
+            Category = "Monitor",
+            Image = "https://m.media-amazon.com/images/I/71Q5odbVSiL._AC_SX679_.jpg",
+            SKU = "B0BRV78FWG",
+            Brand = "SANSUI",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("0099b1ae-8cc7-4aab-941a-d28cb5b3a5d2"),
+            Name = "SANSUI Computer Monitors 27 inch 100Hz IPS USB Type-C FHD 1080P HDR10 Built-in Speakers HDMI DP Game RTS/FPS tilt Adjustable for Working and Gaming (ES-27X3 Type-C Cable & HDMI Cable Included)",
+            Description = 
+@"27 Full HD IPS(1920*1080) HDR10 Monitor for Home, Game and Office
+Refresh Rate: 100Hz, Response Time: 5ms with HDMI&DP; Brightness: 300Nits;Free Sync Technology, RTS/FPS/RACING/Screen Assistance
+Interface& Speakers: 1×Type-C /HDMI 1.4/DP Ports (HDMI & Type-C Cable include); 2×2W Built-in Speakers
+Ergonomic Design: V-shaped Saved Room Metal Stand, -5°~15°Tilt , 178°V/H Viewing Angle, 100×100mm VESA
+Warranty: A 30-day money-back and free replacement warranty from order date and lifetime technical support.",
+            Price = 113f,
+            Category = "Monitor",
+            Image = "https://m.media-amazon.com/images/I/71DA65jzsaL._AC_SX679_.jpg",
+            SKU = "B0BRV7N7K1",
+            Brand = "SANSUI",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("19825e0d-1814-44ec-bcc2-04ae50041be0"),
+            Name = "Acer KB272 EBI 27 IPS Full HD (1920 x 1080) Zero-Frame Gaming Office Monitor | AMD FreeSync Technology | Up to 100Hz Refresh | 1ms (VRB) | Low Blue Light | Tilt | HDMI & VGA Ports,Black",
+            Description = 
+@"27 Full HD IPS (1920 x 1080) Monitor For Home, Gaming or Office
+AMD FreeSync Technology
+Response Time: 1ms VRB | Refresh Rate: 100Hz (Using HDMI Port) | Brightness: 250 nits | Pixel Pitch: 0.311mm
+Ergonomic Tilt: -5° to 15° | VESA Mounting Compliant (100 x 100mm)
+Ports: 1 x HDMI 1.4 Port & 1 x VGA Port (HDMI Cable Included)",
+            Category = "Monitor",
+            Price = 119.99f,
+            Image = "https://m.media-amazon.com/images/I/81FTa3aSdnL._AC_SX679_.jpg",
+            SKU = "B0BY9NPLP4",
+            Brand = "Acer",
+            IsAvailable = true
+        },
+        new Product()
+        {
+            Id = new Guid("025a2656-8a87-4d22-b0e5-35e019071716"),
+            Name = "Turtle Beach Stealth 600 Gen 2 USB Wireless Amplified Gaming Headset - Licensed for Xbox Series X|S & Xbox One - 24+ Hour Battery, 50mm Speakers, Flip-to-Mute Mic, Spatial Audio – Black (Renewed)",
+            Description = 
+@"Officially Licensed by Microsoft for Xbox
+Proprietary, Lag-free 2.4GHz Wireless Connection
+Upgraded, 24+ Hour Battery Life
+Gen 2 Mic for Clear chat with teammates
+Powerful, amplified 50mm speakers tuned for surround sound",
+            Category = "Headset",
+            Price = 59.95f,
+            Image = "https://m.media-amazon.com/images/I/81KNikS6HvL._SX466_.jpg",
+            SKU = "B0C88B8DR2",
+            Brand = "N/A",
+            IsAvailable = true
         }
     };
 

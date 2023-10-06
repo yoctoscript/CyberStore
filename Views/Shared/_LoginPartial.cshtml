@@ -13,7 +13,6 @@
         var cartId = ViewData["CartId"].ToString();
         if(!CartRepository.Carts.ContainsKey(cartId))
         {
-            CartRepository.Carts.Add(cartId, new());
             title = $"{0:C2}";
         }
         else if(CartRepository.Carts[cartId] is null)

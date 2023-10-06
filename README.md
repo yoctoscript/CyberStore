@@ -5,6 +5,7 @@ An e-commerce web application focused on gaming products, developed using ASP.NE
 - .NET SDK 7.0.111
 - ASP.NET Core Runtime 7.0.11
 - Clone the repository and run: `dotnet run`
+- Open browser and goto: `http://localhost:5013/`
 
 ## The Different Roles Existing within the App
 - Administrator Role:
@@ -24,7 +25,7 @@ Here's a  list of the key features integrated into my web application.
 - [x] User Management Dashboard
 - [x] Product Management Dashboard
 - [x] Home Page Product Display with Pagination
-- [ ] Shopping Cart and Checkout System
+- [x] Shopping Cart and Checkout System
 
 ### Tags:
 C#, .NET 7.0, Entity Framework Core, SQLite

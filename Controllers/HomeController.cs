@@ -31,7 +31,7 @@ public class HomeController : Controller
         var itemsPerPage = 9;
         var query = applicationRepository.Products.AsNoTracking().OrderBy(p => p.Id).Skip(id * itemsPerPage).Take(itemsPerPage);
         IEnumerable<Product> products = query.ToList();
-        var count = query.Count();
+        var count = applicationRepository.Products.Count();
         var pages = ((count % itemsPerPage) == 0) ? (count/itemsPerPage) : ((count / itemsPerPage) + 1); 
         ViewData["Pages"] = pages;
         ViewData["Id"] = id;
